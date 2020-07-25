@@ -38,7 +38,8 @@ struct MainView: View {
         NavigationView {
             
             VStack {
-                NavigationLink(destination: RunOutView()) {
+                
+                NavigationLink(destination: EquityRunoutView()) {
                     Text("Simulate runout")
                 }
                 Spacer()

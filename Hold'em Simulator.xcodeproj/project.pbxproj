@@ -30,6 +30,8 @@
 		9BDB4F2924BC595C00C98494 /* Hold_em_SimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB4F2824BC595C00C98494 /* Hold_em_SimulatorTests.swift */; };
 		9BDB4F3424BC59BA00C98494 /* CardStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB4F3324BC59BA00C98494 /* CardStruct.swift */; };
 		9BDB4F3524BC59BA00C98494 /* CardStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB4F3324BC59BA00C98494 /* CardStruct.swift */; };
+		9BDB4F3724C5CE4A00C98494 /* EquityRunoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB4F3624C5CE4A00C98494 /* EquityRunoutView.swift */; };
+		9BDB4F3824C5CE4A00C98494 /* EquityRunoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB4F3624C5CE4A00C98494 /* EquityRunoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,7 @@
 		9BDB4F2824BC595C00C98494 /* Hold_em_SimulatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hold_em_SimulatorTests.swift; sourceTree = "<group>"; };
 		9BDB4F2A24BC595C00C98494 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BDB4F3324BC59BA00C98494 /* CardStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStruct.swift; sourceTree = "<group>"; };
+		9BDB4F3624C5CE4A00C98494 /* EquityRunoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquityRunoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +122,9 @@
 				9BDB4F1124BC595800C98494 /* AppDelegate.swift */,
 				9BDB4F1324BC595800C98494 /* SceneDelegate.swift */,
 				9BDB4F1524BC595800C98494 /* ContentView.swift */,
-				8E3C40EC24C4886500CD8A66 /* RunOutView.swift */,
 				8E3C40EF24C48DD400CD8A66 /* MainViewModel.swift */,
+				8E3C40EC24C4886500CD8A66 /* RunOutView.swift */,
+				9BDB4F3624C5CE4A00C98494 /* EquityRunoutView.swift */,
 				8E559E1024C2FA9C00CD290F /* Models */,
 				9BDB4F1724BC595B00C98494 /* Assets.xcassets */,
 				9BDB4F1C24BC595B00C98494 /* LaunchScreen.storyboard */,
@@ -254,6 +258,7 @@
 				9BDB4F1224BC595800C98494 /* AppDelegate.swift in Sources */,
 				9BDB4F3424BC59BA00C98494 /* CardStruct.swift in Sources */,
 				8E559E0824C2F87E00CD290F /* SuitEnum.swift in Sources */,
+				9BDB4F3724C5CE4A00C98494 /* EquityRunoutView.swift in Sources */,
 				8E3C40F024C48DD400CD8A66 /* MainViewModel.swift in Sources */,
 				8E559E1524C322D400CD290F /* HandEvaluator.swift in Sources */,
 				9BDB4F1424BC595800C98494 /* SceneDelegate.swift in Sources */,
@@ -272,6 +277,7 @@
 				9BDB4F2924BC595C00C98494 /* Hold_em_SimulatorTests.swift in Sources */,
 				8E559E1624C322D400CD290F /* HandEvaluator.swift in Sources */,
 				9BDB4F3524BC59BA00C98494 /* CardStruct.swift in Sources */,
+				9BDB4F3824C5CE4A00C98494 /* EquityRunoutView.swift in Sources */,
 				8E3C40EE24C4886500CD8A66 /* RunOutView.swift in Sources */,
 				8E3C40F124C48DD400CD8A66 /* MainViewModel.swift in Sources */,
 				8E3C40F424C49DD300CD8A66 /* RunoutSimulator.swift in Sources */,

@@ -1,15 +1,14 @@
 //
-//  RunOutView.swift
+//  EquityRunoutView.swift
 //  Hold'em Simulator
 //
-//  Created by Hoang Luong on 19/7/20.
+//  Created by Hoang Luong on 20/7/20.
 //  Copyright © 2020 Hoang Luong. All rights reserved.
 //
 
 import SwiftUI
 
-struct RunOutView: View {
-    
+struct EquityRunoutView: View {
     @EnvironmentObject var viewModel: MainViewModel
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
@@ -19,7 +18,7 @@ struct RunOutView: View {
         VStack {
             Text("Run it out")
             
-            Button(action: { self.viewModel.runout(self.runTimes + 1) }) {
+            Button(action: { self.viewModel.runoutHighVolume(runs: 10000) }) {
                 Text("Simulate") .padding(12)
                     .foregroundColor(Color.white) .background(Color.blue) .cornerRadius(8)
             }
@@ -41,6 +40,8 @@ struct RunOutView: View {
                     .modifier(CardBox())
             }
             
+            Text(viewModel.playerOneEquity)
+            
             HStack {
                 if viewModel.flopCardOne != "blank" {
                     HStack {
@@ -58,21 +59,9 @@ struct RunOutView: View {
                                 .resizable()
                                 .modifier(CardBox())
                         }
-                    }  
-                }
-
-                VStack {
-                    ForEach(viewModel.runoutResults, id: \.id) { result in
-                        HStack {
-                            ForEach(result.cards, id: \.self) { card in
-                                Image(card.lowercased())
-                                    .resizable()
-                                    .modifier(CardBox())
-                            }
-                            Text(result.winner)
-                        }
                     }
                 }
+                
             }
             
             Picker(selection: $runTimes, label: Text("")) {
@@ -81,18 +70,15 @@ struct RunOutView: View {
                 }
             }
             .labelsHidden()
- 
+            
         }
-
+        
         
     }
-    
 }
 
-struct RunOutView_Previews: PreviewProvider {
+struct EquityRunoutView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            RunOutView().environmentObject(MainViewModel())
-        }
+        EquityRunoutView().environmentObject(MainViewModel())
     }
 }
