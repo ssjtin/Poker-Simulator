@@ -30,6 +30,7 @@ struct RunOutView: View {
                         .foregroundColor(Color.white) .background(Color.blue) .cornerRadius(8)
                     if viewModel.betAmount != 0 {
                         Text("Player one EV = \(viewModel.playerOneEV)")
+                        Text("Player two EV = \(viewModel.playerTwoEV)")
                     }
                     
                 }

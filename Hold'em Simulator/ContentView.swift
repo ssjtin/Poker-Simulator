@@ -11,7 +11,7 @@ import SwiftUI
 struct CardBox: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .frame(idealWidth: 60, idealHeight: 100)
+            .frame(idealWidth: 50, idealHeight: 80)
             .fixedSize()
             .border(Color.black)
     }
@@ -42,9 +42,18 @@ struct MainView: View {
                 NavigationLink(destination: EquityRunoutView()) {
                     Text("Calculate equity")
                 }
+                .padding(5)
+                .border(Color.blue)
+                
+                Spacer()
+                    .frame(height:20)
+                
                 NavigationLink(destination: RunOutView()) {
                     Text("Run it twice (or more)")
                 }
+                .padding(5)
+                .border(Color.blue)
+                
                 HStack {
                     Group {
                         NavigationLink(destination: ContentView(editing: .holeCardOneA)) {
@@ -59,8 +68,6 @@ struct MainView: View {
                         }.buttonStyle(PlainButtonStyle())
                     }
                 }
-                Spacer()
-                    .frame(height: 100)
                 Text("Community cards")
                 HStack {
                     Group {
@@ -96,8 +103,6 @@ struct MainView: View {
                     }
                 }
                 
-                Spacer()
-                    .frame(height: 100)
                 HStack {
                     Group {
                         NavigationLink(destination: ContentView(editing: .holeCardOneB)) {
@@ -118,6 +123,7 @@ struct MainView: View {
                         .foregroundColor(Color.white) .background(Color.blue) .cornerRadius(8)
                 }
                 .shadow(color: Color.purple, radius: 3, x: 2, y: 2)
+                Spacer()
             }
         }
         

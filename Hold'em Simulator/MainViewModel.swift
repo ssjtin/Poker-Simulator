@@ -36,6 +36,7 @@ class MainViewModel: ObservableObject {
     @Published var playerOneEquity = ""
     
     @Published var playerOneEV = ""
+    @Published var playerTwoEV = ""
     
     var betAmount: Double = 0
     
@@ -142,6 +143,7 @@ class MainViewModel: ObservableObject {
         if betAmount != 0 {
             let ev = betAmount * playerAWinCount / Double(times)
             playerOneEV = String(format: "%.0f", ev)
+            playerTwoEV = String(format: "%.0f", betAmount - ev)
         }
         runoutResults = results
     }
