@@ -40,11 +40,11 @@ struct MainView: View {
             VStack {
                 
                 NavigationLink(destination: EquityRunoutView()) {
-                    Text("Simulate runout")
+                    Text("Calculate equity")
                 }
-                Spacer()
-                    .frame(height: 20)
-                
+                NavigationLink(destination: RunOutView()) {
+                    Text("Run it twice (or more)")
+                }
                 HStack {
                     Group {
                         NavigationLink(destination: ContentView(editing: .holeCardOneA)) {

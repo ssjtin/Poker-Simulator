@@ -18,7 +18,6 @@ class Hold_em_SimulatorTests: XCTestCase {
 
     override func tearDownWithError() throws {
         cards.removeAll()
-        handType = nil
     }
     
     func testBestHandDetection() {

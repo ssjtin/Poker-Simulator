@@ -35,6 +35,10 @@ class MainViewModel: ObservableObject {
     
     @Published var playerOneEquity = ""
     
+    @Published var playerOneEV = ""
+    
+    var betAmount: Double = 0
+    
     var currentlyEditingCard: CardIdentifier?
     
     var allSelectedCardStrings: [String] {
@@ -112,6 +116,7 @@ class MainViewModel: ObservableObject {
         let cardStringsB = [firstHoleCardB, secondHoleCardB, flopCardOne, flopCardTwo, flopCardThree, turnCard, riverCard]
         
         var results = [Runout]()
+        var playerAWinCount = 0.0
         
         for cards in runoutCards {
             let combinedA = cardStringsA + cards
@@ -125,13 +130,27 @@ class MainViewModel: ObservableObject {
             
             if handA == handB {
                 results.append(Runout(cards: cards, winner: "Split pot"))
+                playerAWinCount += 0.5
+            } else if handA > handB {
+                results.append(Runout(cards: cards, winner: "Player one"))
+                playerAWinCount += 1
             } else {
-                (handA > handB) ?
-                    results.append(Runout(cards: cards, winner: "Player one")) :
-                    results.append(Runout(cards: cards, winner: "Player two"))
+                results.append(Runout(cards: cards, winner: "Player two"))
             }
         }
         
+        if betAmount != 0 {
+            let ev = betAmount * playerAWinCount / Double(times)
+            playerOneEV = String(format: "%.0f", ev)
+        }
         runoutResults = results
+    }
+    
+    func clearEquityResults() {
+        playerOneEquity = ""
+    }
+    
+    func clearRunOut() {
+        runoutResults.removeAll()
     }
 }

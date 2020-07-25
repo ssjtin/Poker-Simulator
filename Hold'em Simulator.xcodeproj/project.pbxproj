@@ -21,6 +21,7 @@
 		8E559E0F24C2F8F200CD290F /* HandTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E559E0D24C2F8F200CD290F /* HandTypeEnum.swift */; };
 		8E559E1524C322D400CD290F /* HandEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E559E1424C322D400CD290F /* HandEvaluator.swift */; };
 		8E559E1624C322D400CD290F /* HandEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E559E1424C322D400CD290F /* HandEvaluator.swift */; };
+		9B952BC724CC036E00E50756 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB4F1524BC595800C98494 /* ContentView.swift */; };
 		9BDB4F1224BC595800C98494 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB4F1124BC595800C98494 /* AppDelegate.swift */; };
 		9BDB4F1424BC595800C98494 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB4F1324BC595800C98494 /* SceneDelegate.swift */; };
 		9BDB4F1624BC595800C98494 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB4F1524BC595800C98494 /* ContentView.swift */; };
@@ -272,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E559E0F24C2F8F200CD290F /* HandTypeEnum.swift in Sources */,
+				9B952BC724CC036E00E50756 /* ContentView.swift in Sources */,
 				8E559E0C24C2F89A00CD290F /* ValueEnum.swift in Sources */,
 				8E559E0924C2F87E00CD290F /* SuitEnum.swift in Sources */,
 				9BDB4F2924BC595C00C98494 /* Hold_em_SimulatorTests.swift in Sources */,
